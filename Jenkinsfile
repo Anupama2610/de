@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "anupama2610/prog10"
+        DOCKER_IMAGE = "anupama2610/pro"
     }
 
     stages {
@@ -10,7 +10,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 git branch: 'main',
-                    url: 'YOUR_GITHUB_REPOSITORY_URL'
+                    url: ' https://github.com/Anupama2610/de.git'
             }
         }
 
@@ -30,7 +30,7 @@ pipeline {
                 ]) {
                     bat '''
                     @echo off
-                    echo %DOCKER_PAT% | docker login -u YOUR_DOCKERHUB_USERNAME --password-stdin
+                    echo %DOCKER_PAT% | docker login -u Anupama2610 --password-stdin
                     if errorlevel 1 exit /b 1
                     '''
                 }

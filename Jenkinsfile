@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "my-tomcat"
+        DOCKER_IMAGE = "anupama2610/pro"
     }
 
     stages {
